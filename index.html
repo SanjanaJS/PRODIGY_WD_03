@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic-Tac-Toe | Prodigy Infotech</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid"></div>
+    </div>
+
+
+    <!-- Main Application -->
+    <main class="game-container">
+
+        <!-- Header -->
+        <header class="game-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+
+                <div>
+                    <h1>XO Arena</h1>
+                    <p>Classic Tic-Tac-Toe • Modern Experience</p>
+                </div>
+
+            </div>
+
+            <div class="game-status">
+                <span class="status-dot"></span>
+                <span id="statusText">Game Ready</span>
+            </div>
+
+        </header>
+
+
+        <!-- Mode Selection -->
+        <section class="mode-section">
+
+            <h2>Choose Game Mode</h2>
+
+            <div class="mode-buttons">
+
+                <button id="playerModeBtn" class="mode-btn active">
+                    <i class="fa-solid fa-users"></i>
+                    <span>2 Players</span>
+                </button>
+
+                <button id="aiModeBtn" class="mode-btn">
+                    <i class="fa-solid fa-robot"></i>
+                    <span>Play vs AI</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Scoreboard -->
+        <section class="scoreboard">
+
+            <div class="score-card player-x">
+
+                <span class="score-label">PLAYER X</span>
+
+                <strong id="scoreX">0</strong>
+
+            </div>
+
+
+            <div class="score-card draws">
+
+                <span class="score-label">DRAWS</span>
+
+                <strong id="scoreDraw">0</strong>
+
+            </div>
+
+
+            <div class="score-card player-o">
+
+                <span class="score-label">PLAYER O</span>
+
+                <strong id="scoreO">0</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- Turn Indicator -->
+        <div class="turn-indicator">
+
+            <span id="turnIcon">X</span>
+
+            <span id="turnText">Player X's Turn</span>
+
+        </div>
+
+
+        <!-- Game Board -->
+        <section class="board" id="board">
+
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+
+        </section>
+
+
+        <!-- Result Message -->
+        <div id="resultMessage" class="result-message">
+
+            <div class="result-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <h2 id="resultTitle">You Win!</h2>
+
+            <p id="resultText">
+                Congratulations!
+            </p>
+
+        </div>
+
+
+        <!-- Controls -->
+        <div class="game-controls">
+
+            <button id="restartBtn" class="control-btn restart-btn">
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                <span>Restart Round</span>
+
+            </button>
+
+
+            <button id="resetScoreBtn" class="control-btn reset-btn">
+
+                <i class="fa-solid fa-trash-can"></i>
+
+                <span>Reset Score</span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Game Rules -->
+        <section class="rules-card">
+
+            <h3>
+                <i class="fa-solid fa-circle-info"></i>
+                How to Play
+            </h3>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Get three of your marks in a row.
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    You can play with a friend or against AI.
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    The first player to complete a line wins.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Built with
+                <span>HTML</span>
+                •
+                <span>CSS</span>
+                •
+                <span>JavaScript</span>
+            </p>
+
+            <p class="footer-note">
+                XO Arena © 2026
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
